@@ -24,7 +24,7 @@ public class HelloControllerTest {
 	public void getHello() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/service2/app2").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
-				.andExpect(content().string(equalTo("This is  application2!")));
+				.andExpect(content().string(equalTo("This is a application2!")));
 	}
 }
 
