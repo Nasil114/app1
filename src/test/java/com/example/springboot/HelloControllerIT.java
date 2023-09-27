@@ -17,7 +17,7 @@ public class HelloControllerIT {
 
     @Test
     public void getHello() throws Exception {
-        ResponseEntity<String> response = template.getForEntity("/service1/app1", String.class);
-        assertThat(response.getBody()).isEqualTo("This is app1!");
+        ResponseEntity<String> response = template.getForEntity("/service1/app2", String.class);
+        assertThat(response.getBody()).isEqualTo("This is app2!");
     }
 }
