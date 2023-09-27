@@ -17,13 +17,13 @@ public class HelloControllerIT {
 
     @Test
     public void getHello() throws Exception {
-        ResponseEntity<String> response = template.getForEntity("/service2/app2", String.class);
-        assertThat(response.getBody()).isEqualTo("This is a application2!");
+        ResponseEntity<String> response = template.getForEntity("/service1/app1", String.class);
+        assertThat(response.getBody()).isEqualTo("This is a application1!");
     }
 
     @Test
     public void get() throws Exception {
-        ResponseEntity<String> response = template.getForEntity("/service2/getcurrentime", String.class);
+        ResponseEntity<String> response = template.getForEntity("/service1/getcurrentime", String.class);
         assertThat(response.getBody()).isNotNull();
     }
 }

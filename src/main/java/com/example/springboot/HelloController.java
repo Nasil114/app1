@@ -15,18 +15,20 @@ public class HelloController {
 	private Environment env;
 
 
-	@GetMapping("service2/app2")
+	@GetMapping("service1/app1")
 	public String index() {
-		return "This is a application2!";
+		return "This is a application1!";
 	}
-	@GetMapping("service2/getcurrentime")
+
+
+	@GetMapping("service1/getcurrentime")
 	public String getCurrentTime() {
 		LocalDateTime now = LocalDateTime.now();
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 		return (dtf.format(now));
 	}
 
-	@GetMapping("service2/getapplicationproperties")
+	@GetMapping("service1/getapplicationproperties")
 	public String getApplicationProperties() {
 
 		StringBuilder sb=new StringBuilder();
