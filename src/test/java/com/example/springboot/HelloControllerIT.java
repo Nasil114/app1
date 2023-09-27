@@ -20,4 +20,10 @@ public class HelloControllerIT {
         ResponseEntity<String> response = template.getForEntity("/service2/app2", String.class);
         assertThat(response.getBody()).isEqualTo("This is a application2!");
     }
+
+    @Test
+    public void get() throws Exception {
+        ResponseEntity<String> response = template.getForEntity("/service2/getcurrentime", String.class);
+        assertThat(response.getBody()).isNotNull();
+    }
 }
