@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-	@GetMapping("/")
+	@GetMapping("service1/app1")
 	public String index() {
-		return "Greetings from Spring Boot v13.0!";
+		return "This is app1!";
 	}
 
 }
